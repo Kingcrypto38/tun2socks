@@ -6,7 +6,7 @@ COPY . /src
 RUN apk add --update --no-cache make git \
     && make tun2socks
 
-FROM alpine:latest
+FROM alpine:3.19.1
 LABEL org.opencontainers.image.source="https://github.com/xjasonlyu/tun2socks"
 
 COPY docker/entrypoint.sh /entrypoint.sh
